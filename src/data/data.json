@@ -4,14 +4,14 @@
     "paragraph": "Need a helping hand? Eco-Home services is here for you!"
   },
   "About": {
-    "paragraph": "Write a short selling point  for the business",
+    "paragraph": "We are ECO-HOME SERVICES, a mutli-service company run by a skilled team who understands the right way to offer home services. We created Eco-Home to make people's lives easier by offering services for all your needs under one name!",
     "Why": [
-      "Enter stuff",
-      "More stuff"
+      "A small team of professionals",
+      "Efficient and cost effective"
     ],
     "Why2": [
-      "Enter stuff",
-      "Another reason"
+      "We provide multiple services",
+      ""
     ]
   },
   "Gallery": [
@@ -106,8 +106,8 @@
     "address": "Ottawa, ON",
     "phone": "+1 343-202-3419",
     "email": "ecohomeservices03@gmail.com",
-    "facebook": "fb.com",
-    "twitter": "twitter.com",
+    "facebook": "https://www.facebook.com/profile.php?id=100094032776238",
+    "ig": "https://www.instagram.com/eco.homeservices/",
     "youtube": "youtube.com"
   },
   "Features": [

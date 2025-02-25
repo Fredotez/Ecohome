@@ -121,7 +121,7 @@ hr {
   bottom: -1px;
   width: 0;
   height: 2px;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  background: linear-gradient(to right, #00ff55 0%, #dfb21e 75%);
   content: "";
   transition: width 0.2s;
 }
@@ -145,7 +145,7 @@ hr {
   bottom: -1px !important;
   width: 100% !important;
   height: 2px !important;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%) !important;
+  background: linear-gradient(to right, #00ff55 0%, #5ca9fb 100%) !important;
   content: "" !important;
   transition: width 0.2s !important;
 }
@@ -157,11 +157,11 @@ hr {
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
   background-color: #fff;
-  border-color: #608dfd;
+  border-color: #00ff55;
 }
 
 .navbar-default .navbar-toggle:hover>.icon-bar {
-  background-color: #608dfd;
+  background-color: #00ff55;
 }
 
 .section-title {
@@ -195,7 +195,7 @@ hr {
   text-transform: uppercase;
   color: #fff;
   background-color: #ffffff;
-  background-image: linear-gradient(to right, #40e856 0%, #c2db23 100%);
+  background-image: linear-gradient(to right, #5fc065 0%, #c2db23 100%);
   padding: 14px 34px;
   letter-spacing: 1px;
   margin: 0;
@@ -213,7 +213,7 @@ hr {
 .btn-custom.active {
   color: #fff;
   background-image: none;
-  background-color: #cf7022;
+  background-color: #f4aa6d;
 }
 
 .btn:active,
@@ -336,7 +336,7 @@ header .intro-text {
 #about .about-text li:before {
   content: "\f00c";
   font-family: "FontAwesome";
-  color: #5ca9fb;
+  color: #00ff55;
   font-size: 11px;
   font-weight: 300;
   padding-right: 8px;
@@ -358,7 +358,7 @@ header .intro-text {
 /* Services Section */
 #services {
   padding: 100px 0;
-  background: linear-gradient(to right, #b1de1c 0%, #da9c16 100%);
+  background: linear-gradient(to right, #5fc065 0%, #da9c16 90%);
   color: #fff;
 }
 
@@ -428,11 +428,11 @@ header .intro-text {
   margin: 0 auto;
   color: #fff;
   background: linear-gradient(to right,
-      rgba(99, 114, 255, 0.8) 0%,
+      #00ff55 0%,
       rgba(92, 169, 251, 0.8) 100%);
   padding: 30% 0 0;
   height: 100%;
-  width: 100%;
+  width: 80%;
   opacity: 0;
   transition: all 0.5s;
 }
@@ -534,7 +534,7 @@ header .intro-text {
 /* Contact Section */
 #contact {
   padding: 100px 0 60px;
-  background: linear-gradient(to right, #b7e4ce 0%, #48ed67 100%);
+  background: linear-gradient(to right, #5fc065 0%, #da9c16 100%);
   color: rgba(255, 255, 255, 0.75);
 }
 

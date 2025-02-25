@@ -8,7 +8,7 @@ export const Services = (props) => {
         <div className="section-title">
           <h2>Our Services</h2>
           <p>
-            Our company offers a comprehensive range of services tailored to meet your year-round needs. From expert landscaping and moving assistance during the warmer months to reliable snow removal and other handyman tasks in the winter, we are dedicated to providing efficient and quality solutions for your home or business.
+            Eco-home services offers a comprehensive range of services tailored to meet your year-round needs. From expert landscaping and moving assistance during the warmer months to reliable snow removal and other handyman tasks in the winter, we are dedicated to providing efficient and quality solutions for your home or business.
           </p>
         </div>
         <div className="row">
