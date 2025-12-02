@@ -1,5 +1,24 @@
 import React from "react";
 
+/**
+ * 
+ * @param {
+ * } props 
+ * @returns 
+ * 
+ *  <li>
+              <a href="#about" className="page-scroll">
+                About
+              </a>
+            </li>
+
+            <li>
+              <a href="#portfolio" className="page-scroll">
+                Gallery
+              </a>
+            </li>
+ */
+
 export const Navigation = (props) => {
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
@@ -33,17 +52,6 @@ export const Navigation = (props) => {
               </a>
             </li>
 
-            <li>
-              <a href="#about" className="page-scroll">
-                About
-              </a>
-            </li>
-
-            <li>
-              <a href="#portfolio" className="page-scroll">
-                Gallery
-              </a>
-            </li>
             <li>
               <a href="#contact" className="page-scroll">
                 Contact

@@ -5,30 +5,32 @@ import React from "react";
 const initialState = {
   name: "",
   email: "",
+  service: "",
+  date: "",
   message: "",
 };
 
-
 export const Contact = (props) => {
-  const [{ name, email, message }, setState] = useState(initialState);
+  const [{ name, email, service, date, message }, setState] =
+    useState(initialState);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setState((prevState) => ({ ...prevState, [name]: value }));
   };
+
   const clearState = () => setState({ ...initialState });
-
-
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(name, email, message);
-
-    // {/* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */ }
 
     emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY")
+      .sendForm(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        e.target,
+        "YOUR_PUBLIC_KEY"
+      )
       .then(
         (result) => {
           console.log(result.text);
@@ -43,118 +45,174 @@ export const Contact = (props) => {
   return (
     <div>
       <div id="contact">
-        <div className="container">
-          <div className="col-md-8">
+        <div className="container contact-container">
+          {/* LEFT — FORM */}
+          <div className="col-md-8 contact-form-col">
             <div className="row">
-              <div className="section-title">
-                <h2>Reach out to us</h2>
+              <div className="section-title contact-title">
+                <h2>Request a Quote</h2>
                 <p>
-                  Please fill out the form below to send us an email and we will
-                  get back to you as soon as possible.
+                  Tell us about your project and preferred date. Our team will
+                  reach out with a tailored quote as soon as possible.
                 </p>
               </div>
-              <form name="sentMessage" validate onSubmit={handleSubmit}>
-                <div className="row">
+
+              <form name="quoteForm" onSubmit={handleSubmit}>
+                <div className="row form-row">
+                  {/* Name */}
                   <div className="col-md-6">
-                    <div className="form-group">
+                    <div className="form-group spaced-field">
                       <input
                         type="text"
                         id="name"
                         name="name"
                         className="form-control"
-                        placeholder="Name"
+                        placeholder="Your Name"
                         required
+                        value={name}
                         onChange={handleChange}
                       />
-                      <p className="help-block text-danger"></p>
                     </div>
                   </div>
+
+                  {/* Email */}
                   <div className="col-md-6">
-                    <div className="form-group">
+                    <div className="form-group spaced-field">
                       <input
                         type="email"
                         id="email"
                         name="email"
                         className="form-control"
-                        placeholder="Email"
+                        placeholder="Your Email"
                         required
+                        value={email}
                         onChange={handleChange}
                       />
-                      <p className="help-block text-danger"></p>
                     </div>
                   </div>
                 </div>
-                <div className="form-group">
+
+                {/* Service Selection */}
+                <div className="form-group spaced-field">
+                  <select
+                    name="service"
+                    id="service"
+                    className="form-control"
+                    required
+                    value={service}
+                    onChange={handleChange}
+                  >
+                    <option value="">Select a Service</option>
+                    <option value="Landscaping">Landscaping</option>
+                    <option value="Handyman">Handyman</option>
+                    <option value="Moving Assistance">Moving Assistance</option>
+                    <option value="Garden Maintenance">
+                      Garden Maintenance
+                    </option>
+                    <option value="Power Washing">Power Washing</option>
+                    <option value="Snow Removal">Snow Removal</option>
+                  </select>
+                </div>
+
+                {/* Date Picker */}
+                <div className="form-group spaced-field">
+                  <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    className="form-control"
+                    value={date}
+                    onChange={handleChange}
+                  />
+                </div>
+
+                {/* Message */}
+                <div className="form-group spaced-field">
                   <textarea
                     name="message"
                     id="message"
                     className="form-control"
-                    rows="4"
-                    placeholder="Message"
+                    rows="5"
+                    placeholder="Describe your project or service needs..."
                     required
+                    value={message}
                     onChange={handleChange}
                   ></textarea>
-                  <p className="help-block text-danger"></p>
                 </div>
-                <div id="success"></div>
-                <button type="submit" className="btn btn-custom btn-lg">
-                  Send Message
+
+                <button
+                  type="submit"
+                  className="btn btn-custom btn-lg contact-btn"
+                >
+                  Send Request
                 </button>
               </form>
             </div>
           </div>
+
+          {/* RIGHT — CONTACT INFO */}
           <div className="col-md-3 col-md-offset-1 contact-info">
             <div className="contact-item">
               <h3>Contact Info</h3>
+
               <p>
                 <span>
-                  <i className="fa fa-map-marker"></i> Address
+                  <i className="fa-solid fa-location-dot"></i> Address
                 </span>
                 {props.data ? props.data.address : "loading"}
               </p>
-            </div>
-            <div className="contact-item">
+
               <p>
                 <span>
-                  <i className="fa fa-phone"></i> Phone
-                </span>{" "}
+                  <i className="fa-solid fa-phone"></i> Phone
+                </span>
                 {props.data ? props.data.phone : "loading"}
               </p>
-            </div>
-            <div className="contact-item">
+
               <p>
                 <span>
-                  <i className="fa fa-envelope-o"></i> Email
-                </span>{" "}
+                  <i className="fa-solid fa-envelope"></i> Email
+                </span>
                 {props.data ? props.data.email : "loading"}
               </p>
             </div>
           </div>
-          <div className="col-md-12">
-            <div className="row">
-              <div className="social">
-                <ul>
-                  <li>
-                    <a href={props.data ? props.data.facebook : "/"}>
-                      <i className="fa fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={props.data ? props.data.ig : "/"}>
-                      <i className="fa fa-instagram"></i>
-                    </a>
-                  </li>                  
-                </ul>
-              </div>
+
+          {/* SOCIAL */}
+          {/* SOCIAL */}
+          <div className="col-md-12 contact-social">
+            <div className="social">
+              <ul>
+                <li>
+                  <a
+                    className="social-icon"
+                    href={props.data ? props.data.facebook : "/"}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="social-icon"
+                    href={props.data ? props.data.ig : "/"}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="fa fa-instagram"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
+
+      {/* FOOTER */}
       <div id="footer">
         <div className="container text-center">
-          <p>
-            &copy; 2024 Eco-Home Services
-          </p>
+          <p>&copy; 2024 Eco-Home Services</p>
         </div>
       </div>
     </div>

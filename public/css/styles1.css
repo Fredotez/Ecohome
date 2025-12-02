@@ -1,0 +1,294 @@
+/* ============================================================
+   GLOBAL WOOD THEME — COLOR SYSTEM
+   ============================================================ */
+:root {
+  --wood-dark: #6b4423; /* dark walnut */
+  --wood-medium: #a97449; /* polished medium wood */
+  --wood-light: #e8c9a6; /* warm beige */
+  --wood-offwhite: #f7efe6; /* soft warm white */
+
+  --text-dark: #3a2f28; /* deep brown */
+  --text-body: #5c4b3a; /* medium brown */
+
+  --gradient-primary: linear-gradient(90deg, #6b4423, #a97449);
+}
+
+/* ============================================================
+   BASE ELEMENTS
+   ============================================================ */
+
+body,
+html {
+  font-family: "Open Sans", sans-serif;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  color: var(--text-body);
+  font-weight: 400;
+  background: var(--wood-offwhite);
+  width: 100%;
+  height: 100%;
+}
+
+h2,
+h3,
+h4 {
+  font-family: "Raleway", sans-serif;
+  color: var(--text-dark);
+}
+
+h2 {
+  text-transform: uppercase;
+  margin: 0 0 20px;
+  font-weight: 800;
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+h5 {
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+p.intro {
+  margin: 12px 0 0;
+  line-height: 24px;
+}
+
+a {
+  color: var(--wood-medium);
+  font-weight: 500;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: var(--wood-dark);
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+hr {
+  height: 2px;
+  width: 70px;
+  background: var(--wood-medium);
+  border: 0;
+  margin-bottom: 20px;
+}
+
+/* ============================================================
+   HEADER / INTRO SECTION
+   ============================================================ */
+
+.intro {
+  display: table;
+  width: 100%;
+  padding: 0;
+  background: url(../img/portfolio/gazebo-intro.jpg) center center / cover
+    no-repeat;
+  background-color: var(--wood-dark);
+}
+
+.intro .overlay {
+  background: rgba(35, 23, 14, 0.45);
+  backdrop-filter: brightness(0.85);
+}
+
+header .intro-text {
+  padding-top: 200px;
+  padding-bottom: 140px;
+  text-align: center;
+}
+
+.intro h1 {
+  font-family: "Raleway", sans-serif;
+  color: var(--wood-offwhite);
+  font-size: 62px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+  letter-spacing: 1px;
+}
+
+.intro h1 span {
+  font-weight: 800;
+  color: var(--wood-light);
+}
+
+.intro p {
+  color: rgba(255, 248, 240, 0.9);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.45;
+  max-width: 650px;
+  margin: 0 auto 40px;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.btn-custom {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--gradient-primary);
+  padding: 12px 30px;
+  letter-spacing: 1px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 2px solid var(--wood-dark);
+  box-shadow: 0 3px 0 var(--wood-dark);
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+  background: var(--wood-medium);
+  box-shadow: 0 2px 0 var(--wood-medium);
+  color: #fff;
+}
+
+/* ============================================================
+   FEATURES SECTION
+   ============================================================ */
+
+#features {
+  background: var(--wood-offwhite);
+  padding: 60px 0;
+  text-align: center;
+}
+
+#features i.fa {
+  font-size: 32px;
+  margin-bottom: 18px;
+  width: 75px;
+  height: 75px;
+  padding: 18px 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--wood-medium), var(--wood-dark));
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.07);
+  transition: all 0.25s ease;
+}
+
+#features i.fa:hover {
+  background: var(--wood-dark);
+  transform: translateY(-3px);
+}
+
+#features p {
+  color: var(--text-body);
+}
+
+/* ============================================================
+   SERVICES SECTION — FULLY REFINED WOOD THEME
+   ============================================================ */
+
+#services {
+  padding: 70px 0;
+  background: var(--gradient-primary);
+  color: var(--wood-offwhite);
+  text-align: center;
+}
+
+#services .section-title h2 {
+  color: var(--wood-offwhite);
+}
+
+#services .section-title h2::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 50px;
+  bottom: -6px;
+  left: 50%;
+  margin-left: -25px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 2px;
+}
+
+#services .section-title p {
+  max-width: 760px;
+  margin: 0 auto 40px;
+  font-size: 17px;
+  line-height: 1.55;
+  color: rgba(255, 248, 240, 0.85);
+}
+
+/* Service card wrapper – improved */
+#services .service-card {
+  padding: 18px 20px; /* slightly tighter */
+  margin-bottom: 22px;
+
+  background: rgba(255, 255, 255, 0.1); /* clearer, softer */
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 10px;
+
+  backdrop-filter: blur(4px) brightness(1.05);
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+}
+
+/* Hover – refined */
+#services .service-card:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+/* Service icons */
+#services i.fa {
+  font-size: 28px;
+  width: 65px;
+  height: 65px;
+  padding: 18px 0;
+  border-radius: 12px;
+  background: var(--wood-medium);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+#services .service-card:hover i.fa {
+  background: var(--wood-dark);
+}
+
+#services h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--wood-offwhite);
+  margin-top: 12px;
+}
+
+#services p {
+  font-size: 15px;
+  color: rgba(255, 248, 240, 0.9);
+}
+
+/* ============================================================
+   (Ready for next sections: About, Team, Contact if needed)
+   ============================================================ */

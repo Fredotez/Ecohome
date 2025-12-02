@@ -23,17 +23,17 @@ const App = () => {
     setLandingPageData(JsonData);
   }, []);
 
-  //<Features data={landingPageData.Features} /> 
+  //<Features data={landingPageData.Features} />
   //<Testimonials data={landingPageData.Testimonials} />
   // <Team data={landingPageData.Team} />
+  //      <About data={landingPageData.About} />
+  //      <Gallery data={landingPageData.Gallery} />
 
   return (
     <div>
       <Navigation />
       <Header data={landingPageData.Header} />
       <Services data={landingPageData.Services} />
-      <About data={landingPageData.About} />
-      <Gallery data={landingPageData.Gallery} />
       <Contact data={landingPageData.Contact} />
     </div>
   );
