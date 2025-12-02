@@ -23,7 +23,6 @@ export const Contact = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm(
         "YOUR_SERVICE_ID",
@@ -157,28 +156,27 @@ export const Contact = (props) => {
 
               <p>
                 <span>
-                  <i className="fa-solid fa-location-dot"></i> Address
+                  <i className="fa fa-map-marker"></i> Address
                 </span>
                 {props.data ? props.data.address : "loading"}
               </p>
 
               <p>
                 <span>
-                  <i className="fa-solid fa-phone"></i> Phone
+                  <i className="fa-solid fa fa-phone"></i> Phone
                 </span>
                 {props.data ? props.data.phone : "loading"}
               </p>
 
               <p>
                 <span>
-                  <i className="fa-solid fa-envelope"></i> Email
+                  <i className="fa-solid fa fa-envelope"></i> Email
                 </span>
                 {props.data ? props.data.email : "loading"}
               </p>
             </div>
           </div>
 
-          {/* SOCIAL */}
           {/* SOCIAL */}
           <div className="col-md-12 contact-social">
             <div className="social">

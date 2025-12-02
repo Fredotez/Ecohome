@@ -1,16 +1,19 @@
 /* ============================================================
-   GLOBAL WOOD THEME — COLOR SYSTEM
+   GLOBAL theme THEME — COLOR SYSTEM
    ============================================================ */
 :root {
-  --wood-dark: #6b4423; /* dark walnut */
-  --wood-medium: #a97449; /* polished medium wood */
-  --wood-light: #e8c9a6; /* warm beige */
-  --wood-offwhite: #f7efe6; /* soft warm white */
+  /* Forest Core */
+  --theme-dark: #0f2f1f; /* Deep Forest Green */
+  --theme-medium: #285a3f; /* Moss Green */
+  --theme-light: #96c19a; /* Soft Sage */
+  --theme-offwhite: #f0f7f2; /* Forest Mist (very light greenish white) */
 
-  --text-dark: #3a2f28; /* deep brown */
-  --text-body: #5c4b3a; /* medium brown */
+  /* Text Colors */
+  --text-dark: #0b1d14; /* Near-black green */
+  --text-body: #3e5b46; /* Subtle plant-stem green */
 
-  --gradient-primary: linear-gradient(90deg, #6b4423, #a97449);
+  /* Gradient */
+  --gradient-primary: linear-gradient(90deg, #0f2f1f, #285a3f);
 }
 
 /* ============================================================
@@ -24,7 +27,7 @@ html {
   -webkit-font-smoothing: antialiased !important;
   color: var(--text-body);
   font-weight: 400;
-  background: var(--wood-offwhite);
+  background: var(--theme-offwhite);
   width: 100%;
   height: 100%;
 }
@@ -70,14 +73,14 @@ p.intro {
 }
 
 a {
-  color: var(--wood-medium);
+  color: var(--theme-medium);
   font-weight: 500;
 }
 
 a:hover,
 a:focus {
   text-decoration: none;
-  color: var(--wood-dark);
+  color: var(--theme-dark);
 }
 
 ul,
@@ -89,7 +92,7 @@ ol {
 hr {
   height: 2px;
   width: 70px;
-  background: var(--wood-medium);
+  background: var(--theme-medium);
   border: 0;
   margin-bottom: 20px;
 }
@@ -104,7 +107,7 @@ hr {
   padding: 0;
   background: url(../img/portfolio/gazebo-intro.jpg) center center / cover
     no-repeat;
-  background-color: var(--wood-dark);
+  background-color: var(--theme-dark);
 }
 
 .intro .overlay {
@@ -120,7 +123,7 @@ header .intro-text {
 
 .intro h1 {
   font-family: "Raleway", sans-serif;
-  color: var(--wood-offwhite);
+  color: var(--theme-offwhite);
   font-size: 62px;
   font-weight: 700;
   text-transform: uppercase;
@@ -130,7 +133,7 @@ header .intro-text {
 
 .intro h1 span {
   font-weight: 800;
-  color: var(--wood-light);
+  color: var(--theme-light);
 }
 
 .intro p {
@@ -156,14 +159,14 @@ header .intro-text {
   font-size: 15px;
   font-weight: 600;
   border-radius: 6px;
-  border: 2px solid var(--wood-dark);
-  box-shadow: 0 3px 0 var(--wood-dark);
+  border: 2px solid var(--theme-dark);
+  box-shadow: 0 3px 0 var(--theme-dark);
   transition: all 0.3s ease;
 }
 
 .btn-custom:hover {
-  background: var(--wood-medium);
-  box-shadow: 0 2px 0 var(--wood-medium);
+  background: var(--theme-medium);
+  box-shadow: 0 2px 0 var(--theme-medium);
   color: #fff;
 }
 
@@ -172,7 +175,7 @@ header .intro-text {
    ============================================================ */
 
 #features {
-  background: var(--wood-offwhite);
+  background: var(--theme-offwhite);
   padding: 60px 0;
   text-align: center;
 }
@@ -184,14 +187,14 @@ header .intro-text {
   height: 75px;
   padding: 18px 0;
   border-radius: 12px;
-  background: linear-gradient(135deg, var(--wood-medium), var(--wood-dark));
+  background: linear-gradient(135deg, var(--theme-medium), var(--theme-dark));
   color: #fff;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.07);
   transition: all 0.25s ease;
 }
 
 #features i.fa:hover {
-  background: var(--wood-dark);
+  background: var(--theme-dark);
   transform: translateY(-3px);
 }
 
@@ -200,18 +203,18 @@ header .intro-text {
 }
 
 /* ============================================================
-   SERVICES SECTION — FULLY REFINED WOOD THEME
+   SERVICES SECTION — FULLY REFINED theme THEME
    ============================================================ */
 
 #services {
   padding: 70px 0;
   background: var(--gradient-primary);
-  color: var(--wood-offwhite);
+  color: var(--theme-offwhite);
   text-align: center;
 }
 
 #services .section-title h2 {
-  color: var(--wood-offwhite);
+  color: var(--theme-offwhite);
 }
 
 #services .section-title h2::after {
@@ -276,7 +279,7 @@ header .intro-text {
   height: 65px;
   padding: 18px 0;
   border-radius: 12px;
-  background: var(--wood-medium);
+  background: var(--theme-medium);
   color: #fff;
   border: 2px solid rgba(255, 255, 255, 0.25);
   display: inline-flex;
@@ -286,13 +289,13 @@ header .intro-text {
 }
 
 #services .service-card:hover i.fa {
-  background: var(--wood-dark);
+  background: var(--theme-dark);
 }
 
 #services h3 {
   font-size: 20px;
   font-weight: 600;
-  color: var(--wood-offwhite);
+  color: var(--theme-offwhite);
   margin-top: 12px;
 }
 
@@ -301,52 +304,147 @@ header .intro-text {
   color: rgba(255, 248, 240, 0.9);
 }
 
-/* CONTACT SOCIAL — CLEANED UP */
+/* ================================
+   CONTACT SECTION REFINEMENTS
+   ================================ */
+
+/* Container spacing */
+#contact .contact-container {
+  padding-top: 70px;
+  padding-bottom: 60px;
+}
+
+/* Left form column */
+.contact-form-col {
+  padding-right: 40px;
+}
+
+/* Section title spacing */
+.contact-title h2 {
+  margin-bottom: 10px;
+}
+
+.contact-title p {
+  margin-bottom: 35px;
+  line-height: 1.55;
+  max-width: 600px;
+}
+
+/* Each row of the form */
+.form-row {
+  margin-bottom: 10px;
+}
+
+/* Standard spacing for all fields */
+.spaced-field {
+  margin-bottom: 22px;
+}
+
+/* Date picker improvements */
+#contact input[type="date"] {
+  padding: 10px 14px;
+  font-size: 15px;
+  border-radius: 4px;
+}
+
+/* Submit button layout */
+.contact-btn {
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* ================================
+   CONTACT INFO (RIGHT COLUMN)
+   ================================ */
+
+.contact-info {
+  padding-left: 25px;
+  padding-top: 15px;
+}
+
+.contact-info .contact-item {
+  margin-bottom: 32px; /* increased spacing between blocks */
+}
+
+.contact-info h3 {
+  margin-bottom: 18px;
+  font-size: 22px;
+}
+
+/* Spacing between each contact line */
+.contact-info p {
+  margin-bottom: 14px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+/* Icon alignment */
+.contact-info span i {
+  margin-right: 8px;
+  color: var(--theme-light);
+}
+
+/* Make the label (Address, Phone, Email) slightly bolder */
+.contact-info span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* ================================
+   SOCIAL SECTION
+   ================================ */
+
+.contact-social {
+  margin-top: 35px !important;
+  margin-bottom: 10px;
+}
+
+/* Reset social container */
 #contact .social {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
-  padding-top: 2px;
-  padding-bottom: 20px;
-  margin-top: 20;
+  padding-top: 20px;
+  margin-top: 30px;
   text-align: center;
 }
 
+/* Social icons spacing */
 #contact .social ul {
-  list-style: none;
-  margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-}
-
-#contact .social ul li {
   margin: 0;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
 }
 
-/* Circle button lives on the <a>, not the <i> */
+/* Icon button */
 #contact .social a.social-icon {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
-  border: 2px solid rgba(255, 255, 255, 0.35);
+  background: var(--theme-dark);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+
   display: flex;
-  align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
+  align-items: center;
+
+  transition: all 0.25s ease;
 }
 
+/* Icon inside */
 #contact .social a.social-icon i.fa {
   font-size: 18px;
-  color: var(--wood-dark);
+
+  color: var(--theme-light);
 }
 
 /* Hover */
 #contact .social a.social-icon:hover {
-  background: var(--wood-light);
-  border-color: var(--wood-medium);
+  background: var(--theme-light);
+  border-color: var(--theme-light);
 }
 
 #contact .social a.social-icon:hover i.fa {
-  color: var(--wood-dark);
+  color: var(--theme-dark);
 }
