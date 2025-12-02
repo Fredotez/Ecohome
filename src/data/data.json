@@ -5,14 +5,8 @@
   },
   "About": {
     "paragraph": "We are ECO-HOME SERVICES, a mutli-service company run by a skilled team who understands the right way to offer home services. We created Eco-Home to make people's lives easier by offering services for all your needs under one name!",
-    "Why": [
-      "A small team of professionals",
-      "Cost effective solutions"
-    ],
-    "Why2": [
-      "Provide multiple services",
-      "Environmentally friendly"
-    ]
+    "Why": ["A small team of professionals", "Cost effective solutions"],
+    "Why2": ["Provide multiple services", "Environmentally friendly"]
   },
   "Gallery": [
     {
@@ -33,19 +27,49 @@
   ],
   "Services": [
     {
-      "icon": "fa fa-home",
-      "name": "Lorem ipsum dolor",
-      "text": "From painting to moving, whether you’re refreshing a room with a new coat of paint or making a seamless move into your new space. We will the handle the heavy lifting! "
+      "icon": "fa fa-leaf",
+      "name": "Landscaping",
+      "text": "Complete landscaping solutions including sod installation, interlocking, garden design, cleanup, and seasonal yard care—done with precision and reliability."
     },
     {
       "icon": "fa fa-wrench",
-      "name": "For you home",
-      "text": "Get home projects done hassle-free! Repairs and furniture assembly, We provide reliable, high-quality service for any task, big or small."
+      "name": "Handyman Services",
+      "text": "Fast, dependable handyman help for repairs, installations, furniture assembly, and general home maintenance. No job too big or too small."
+    },
+    {
+      "icon": "fa fa-truck",
+      "name": "Moving Assistance",
+      "text": "Stress-free moving support—packing, loading, transport, and unloading. We handle the heavy lifting so your move is smooth and efficient."
+    },
+    {
+      "icon": "fa fa-pagelines",
+      "name": "Garden Maintenance",
+      "text": "Keep your garden healthy and beautiful with routine weeding, trimming, fertilizing, soil care, and seasonal preparation."
+    },
+    {
+      "icon": "fa fa-tint",
+      "name": "Power Washing",
+      "text": "Restore your property's exterior with high-pressure cleaning for driveways, decks, siding, patios, walkways, and more."
+    },
+    {
+      "icon": "fa fa-snowflake-o",
+      "name": "Snow Removal",
+      "text": "Reliable winter snow clearing for driveways, walkways, entrances, and small commercial areas—available throughout the season."
+    },
+    {
+      "icon": "fa fa-home",
+      "name": "Home Projects",
+      "text": "From painting to interior updates, we help you refresh, repair, and improve your home with efficient, high-quality workmanship."
+    },
+    {
+      "icon": "fa fa-cogs",
+      "name": "Home Maintenance",
+      "text": "General maintenance services to keep your property running smoothly—seasonal tasks, small fixes, and ongoing care."
     },
     {
       "icon": "fa fa-tree",
-      "name": "For your lawn",
-      "text": "We also specialize in sod installation, interlocking, landscaping, garden cleanup, power washing. Our small, skilled team brings care and precision to every project."
+      "name": "Outdoor Services",
+      "text": "Professional outdoor care including landscaping, garden cleanup, hedge trimming, and seasonal yard preparation."
     }
   ],
   "Testimonials": [

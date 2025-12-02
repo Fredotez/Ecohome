@@ -1,31 +1,38 @@
 import React from "react";
 
 //<h3>{d.name}</h3>
-export const Services = (props) => {
+export const Services = ({ data }) => {
   return (
-    <div id="services" className="text-center">
-      <div className="container">
-        <div className="section-title">
+    <section id="services" className="services">
+      <div className="container text-center">
+        <div className="section-title compact">
           <h2>Our Services</h2>
           <p>
-            Eco-home services offers a comprehensive range of services tailored to meet your year-round needs. From expert landscaping and moving assistance during the warmer months to reliable snow removal and other handyman tasks in the winter, we are dedicated to providing efficient and quality solutions for your home or business.
+            Eco-home Services provides a full range of seasonal home and
+            business solutions—landscaping and moving support during warmer
+            months, and dependable snow removal and handyman work in the winter.
+            Quality, reliability, and year-round care you can count on.
           </p>
         </div>
-        <div className="row">
-          {props.data
-            ? props.data.map((d, i) => (
-              <div key={`${d.name}-${i}`} className="col-md-4">
-                {" "}
-                <i className={d.icon}></i>
-                <div className="service-desc">
-                  <br></br>
-                  <p>{d.text}</p>
+
+        <div className="services-grid">
+          {data ? (
+            data.map((item, i) => (
+              <div key={`${item.name}-${i}`} className="service-card">
+                <div className="service-icon-wrap">
+                  <i className={item.icon}></i>
                 </div>
+
+                <h3 className="service-title">{item.name}</h3>
+
+                <p className="service-text">{item.text}</p>
               </div>
             ))
-            : "loading"}
+          ) : (
+            <p>Loading...</p>
+          )}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
